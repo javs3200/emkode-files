@@ -23,36 +23,41 @@
                 <div class="card">
                     <form action="{{route('edit', $empleado->id)}}" method="POST">
                     @csrf @method('PATCH')
-                        <div class="card-header text-center">Modificar Empleado</div>
-                        
-                            <div class="card-body">
+                       <div class="card-header text-center">Añadir Empleado</div>
+
+                            <div class="card-body ">
                                 <div class="row form-group">
-                                    <label for="" class="col-2">Nombre<label>
+                                    <label for="" class="col-2">Nombre</label>
                                     <input type="text" name="nombre" class="form-control col-md-9" value="{{$empleado->nombre}}">
                                 </div>
+
                                 <div class="row form-group">
-                                    <label for="" class="col-2">Apellido<label>
+                                    <label for="" class="col-2">Apellido</label>
                                     <input type="text" name="apellido" class="form-control col-md-9" value="{{$empleado->apellido}}">
                                 </div>
+
                                 <div class="row form-group">
-                                    <label for="" class="col-2">Correo<label>
+                                    <label for="" class="col-2">Correo</label>
                                     <input type="text" name="correo" class="form-control col-md-9" value="{{$empleado->correo}}">
                                 </div>
+
                                 <div class="row form-group">
-                                    <label for="" class="col-2">Telefono<label>
-                                    <input type="text" name="telefono" class="form-control col-md-9" value="{{$empleado->telefono}}">
+                                    <label for="" class="col-2">Telefono</label>
+                                    <input type="text" name="telefono" class="form-control col-md-9 mb-2" value="{{$empleado->telefono}}">
                                 </div>
-
+                             
                                 <div class="row form-group">
-                                <button type="submit" class="btn btn-success col-md-9 offset-2">Modificar</button>
+                                <button type="submit" class="btn btn-success  col-md-3  mb-2">Modificar</button>
+                                </div>
+                                <div class="row form-group">
+                                <a class="btn btn-primary  col-md-3" href="{{url('/')}}">Volver</a>
+                                </div>
                             </div>
-
-                        </div>
-                    </form>
+                      </form>
     
                 </div>
             </div>
         </div>
     </div>
-    <a class="btn btn-light btn-xs mt-5" href="{{url('/')}}">Volver</a>
+    
 </div>
